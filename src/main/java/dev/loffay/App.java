@@ -55,6 +55,9 @@ public class App extends AbstractVerticle {
     public void start(Future<Void> startFuture) {
         getVertx().eventBus().consumer("foo").handler(event -> {
             System.out.printf("foo -> %s\n", event.body());
+            /**
+             * TODO this is always null
+             */
             System.out.printf("event bus span: %s\n", tracer.activeSpan());
         });
     }
