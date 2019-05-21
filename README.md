@@ -6,6 +6,7 @@ Run Jaeger server:
 
 ```bash
 docker run --net=host jaegertracing/all-in-one:1.12.0
+# open browser on http://localhost:16686/search
 ```
 
 Run the app:
